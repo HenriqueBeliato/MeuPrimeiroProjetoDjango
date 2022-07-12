@@ -2,7 +2,7 @@
 from multiprocessing import set_forkserver_preload
 from django.db import models
 
-# Testando conflitos.
+# Crie seus modelos aqui.
 class Departamento(models.Model):
     nome = models.CharField(max_length=20)
 
@@ -26,6 +26,9 @@ class Funcionario(models.Model):
     data_nascimento = models.DateField(null=True)
     def __str__(self):
         return self.nome
+
+    class Meta:
+        ordering = ['nome']
 
     
 
